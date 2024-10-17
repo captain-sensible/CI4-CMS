@@ -248,9 +248,14 @@ $npm install
 for grunt see 
  See https://gruntjs.com/
 
+ Also i didn't upload vendor nor node_modules so , you will have to run from root of  web app, using a  command line terminal:
+
+ npm install
+ composer update 
+
 Forum for CodeIgniter is : https://forum.codeigniter.com/
 
 any issues you can try me at andybrookestar@gmail.com
 
 If you want to have a go with CodeIgniter4 web development with Arch Linux, this book might help :
-[Arch Linux ]https://www.amazon.co.uk/dp/B0C2SQ8RDM?asc_source=01H8HFYCRM99TJ9FED7FSB1ZXC&tag=snxgb19-21
+[Arch Linux ]https://www.amazon.com/dp/B0DHXZNHZH   
