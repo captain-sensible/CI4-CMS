@@ -249,10 +249,10 @@ for grunt see
  See https://gruntjs.com/
 
  Also i didn't upload vendor nor node_modules so , you will have to run from root of  web app, using a  command line terminal:
-
+<code>
  npm install
  composer update 
-
+</code>
 Forum for CodeIgniter is : https://forum.codeigniter.com/
 
 any issues you can try me at andybrookestar@gmail.com
