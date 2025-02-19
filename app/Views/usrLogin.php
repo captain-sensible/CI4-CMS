@@ -8,7 +8,9 @@
 			 
 			 
 			<div class="mx-2">
-			<p>			</p>     <br><br>
+			<p>		Default user name is :Demo<br><br>
+			Defualt Password is : Demo 
+				</p>     <br><br>
 			</div>
 
                   <div class="mx-auto" >

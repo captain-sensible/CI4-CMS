@@ -1,7 +1,7 @@
 
 <br><br>
 
-<?=$this->extend('webLayout') ?>
+<?=$this->extend('adminLayout') ?>
 			<?=$this->section('content') ?>
             <br><br>
             

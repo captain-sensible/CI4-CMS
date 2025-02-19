@@ -47,8 +47,8 @@
 				 <div class="a"><a href ="https://www.instagram.com/somebody/"  target="_blank" ><i class="fa fa-instagram   fa-3x"></i> </a></div>
 				 
 	           <div class="b"> <a href = "https://www.youtube.com/@somebody"  target="_blank"    > <i class="fa fa-youtube   fa-3x"></i>	</a></div>
-               <div class= "c"><div><h6>powered by:</h6></div> <a href ="https://sourceforge.net/projects/codeigniter4cms/"><h6>codeigniter4cms</h6></a>    </div>
-	 
+              
+	               <div class= "c"><div><h6>powered by:</h6></div> <a href ="https://sourceforge.net/projects/laravelblogengine/"><h7>Laravel blog Engine</h7></a>    </div>
 	
 	        </div>	
 	       <h5 class="newtimes">© <?php echo $date;?> Some Web  Footer    | All Rights Reserved </h5>	

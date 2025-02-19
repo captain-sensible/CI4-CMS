@@ -228,6 +228,8 @@ class Blog extends BaseController
 								 
 								$this->placeHolderImg =   $utilityHandle->allBadChars( $this->imageFileName);
 								$this->imageSlug =	$utilityHandle->removeWhiteSpace($this->placeHolderImg);
+								$this->imageSlug= time()."-".$this->imageSlug;
+								
 															
 								//now check after processing that processed image file does not exist 
 								$logic = $this->imgPreCheckhandle->allReadyExists($this->blogImages,$this->imageSlug);
@@ -472,7 +474,8 @@ class Blog extends BaseController
 	    {
 		   	$session = \Config\Services::session();
 		   
-		    
+		   $this->date = $this->request->getVar('date');
+		   $this->font =$this->request->getVar('font'); 
 	     $this->title = $this->request->getVar('title'); 
 	   $this->article = $this->request->getVar('article');
 	   $this->blogId= $this->request->getVar('Id');
@@ -507,7 +510,7 @@ class Blog extends BaseController
 	   {
 	 
 	   
-	$result=   $handle->amendBlog($this->blogId,$this->cleanedTitle,$this->cleanedArticle,$this->slug);
+	$result=   $handle->amendBlog($this->blogId,$this->cleanedTitle,$this->cleanedArticle,$this->slug, $this->font, $this->date);
    }
    
    catch ( \Exception  $e)

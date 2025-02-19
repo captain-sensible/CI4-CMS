@@ -1,7 +1,7 @@
 
 <br><br>
 
-<?=$this->extend('webLayout') ?>
+<?=$this->extend('adminLayout') ?>
 			<?=$this->section('content') ?>
             <div class="px-2 ">
 			<p style ="color:red"> Below  is a list of blogs , with an Id number to enter into blogId field below. Enter Blog Id and lick submit to delete a blog  		</p></div>

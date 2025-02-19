@@ -34,6 +34,21 @@
           <a class="nav-link" href=" <?php echo base_url('examplefonts');?>">Fonts</a>   
         </li>
      
+      
+      <li class="nav-item">
+          <a class="nav-link" href=" <?php echo base_url('blackcat');?>">Login </a>   
+        </li>
+     
+      <li class="nav-item">
+          <a class="nav-link" href=" <?php echo base_url('logout');?>">log out </a>   
+        </li>
+     
+      <li class="nav-item">
+          <a class="nav-link" href=" <?php echo base_url('admin');?>">Admin</a>   
+        </li>
+     
+      
+      
       </ul>
     </div>
   </div>

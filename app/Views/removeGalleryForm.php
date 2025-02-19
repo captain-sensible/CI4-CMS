@@ -2,11 +2,11 @@
 <br><br>
 
 
-  <?=$this->extend('webLayout') ?>
+  <?=$this->extend('adminLayout') ?>
 <?=$this->section('content') ?>        
           
           
-          
+       This page is for removing gallery images by entering the id of picture you want to remove <br><br>   
             
 
 <div class ="delGalleryImg">
@@ -19,7 +19,7 @@
 				<?php 
 				foreach($result as $res) 
 				{
-				echo    $res['imageTitle'].     "  <br><br>   <img  src =".base_url('galleryImages')."/".$res['image']. "><br class='clearfix'><p style= \"color:red\"> Id to use is :" .$res['Id'].          "</p><br>";
+				echo  "title of image: ".  $res['imageTitle'].     "  <br><br>   <img  src =".base_url('galleryImages')."/".$res['image']. "><br class='clearfix'><p style= \"color:red\"> Id to use is :" .$res['Id'].          "</p><br>";
 				}
 				
 				 ;?>

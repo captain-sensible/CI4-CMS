@@ -1,6 +1,6 @@
+$andy:#OOOOOO;
 $gold:#F5BF03;
 $gold2:rgba(245,191,3,0.5);
-
 $andycolor:rgba(255, 102, 255, 0.1);
 $andycolor2:rgba(227, 11, 74, 0.1);
 $andycolor3:rgba(153, 102, 51, 0.1);
@@ -22,7 +22,6 @@ $christBlue:#4006ba;
 $blue:#200063;
 $sea:#3D9C88;
 $green:#90EE90;
-$green2:#3d9742;
 $orange:#d57614;
 $orange2:#FFC933;
 $lilac:#C8A2C8;
@@ -36,12 +35,32 @@ $prophetBlue:#0000ff;
   }
 }
 
+
+
+
+br.clearfix
+{
+@include clearfix;
+}
+
+
+
+
 @mixin margin
 
 {
 margin-left:1rem;
 margin-right:1rem;
 }
+
+p#toggle
+{
+@inclue margin;
+font-family:'literata_bookregular';
+font-size:1.1rem;
+}
+
+
 h3.links
 {
 letter-spacing:4px;
@@ -54,23 +73,19 @@ h3.links a
 text-decoration:none;
 }
 
-  h4
-  {
-font-family: 'literata_bookmedium', serif, 'literata_bookregular', courier, serif;
-font-size: 1.1rem;
-}
-
-br.clearfix
-{
-@include clearfix;
-}
+ 
+ 
+ 
+ 
 
 
 blockquote.prophet
 {
 margin-left:1rem;
-//indent-text:5px;
+margin-right:1rem;
 }
+
+
 .fa-instagram
 {
 padding:8px;
@@ -196,9 +211,9 @@ width:5%;
 
 }
 
-p {
-  text-indent: 1.5em;
-}
+
+
+
 
 
 h1.magnolia {
@@ -227,6 +242,8 @@ h1.quintessential
  font-family: 'quintessentialregular';
  font-weight: regular; 
 font-size:5rem;
+
+text-shadow: -1px 0 $blue, 0 1px $blue, 2.5px 0 $gold , 0 -1px $blue;
 color:$prophetBlue;
 //above prophet 
 //color:$gold;
@@ -236,7 +253,7 @@ color:$prophetBlue;
 
 
  
-  text-shadow: -1px 0 $gold, 0 1px $gold, 2.5px 0 $gold, 0 -1px black;
+  
 }  
 
 h1.amadeus {
@@ -275,8 +292,26 @@ text-shadow: -1px 0 black, 0 1px $brown, 1px 0 black, 0 -1px black;
   font-weight: bold; 
 font-size: 0.8rem;
 text-align:center;
-
+//color:$lightblue;
+color:white;
  }
+ 
+ a.andy
+ 
+ {
+ color:yellow;
+ 
+ }
+ 
+ 
+ h7.andy
+ 
+ {
+ color:$blue;
+ }
+ 
+ 
+ 
  
  
 h5.newtimes
@@ -291,15 +326,47 @@ text-align:center;
 //above is footer text dont touch 
 }
 
+ h4.literataMedium
+  {
+font-family: 'literata_bookmedium';
+font-size: 1.1rem;
+}
+
+h4.literataRegular
+
+{
+font-family:'literata_bookregular';
+font-size:1.1rem;
+
+}
+
+h4.literataBold
+{
+  font-family: 'literata_bookbold';
+  font-size:1.5rem;
+}
+
+
+h4.bible
+
+{
+font-family:'balgruf';
+ font-size:1.5rem;
+font-weight:regular;
+color:$brown;
+ 
+}
+
+
 h4.aaargh
 {
  font-family: 'aaarghnormal';
- font-size:2.0rem;
-font-weight:regular;
-color:$green2;
- text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ font-weight: regular; 
+font-size:2.1rem;
+color:$orange;
+ 
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-
 
 h4.newtimesroman
 {
@@ -323,8 +390,7 @@ color:$brown;
 
 h4.anticSlab{
 font-family: 'antic_slabregular';
-font-family: 'antic_sansregular';
- font-family: 'quintessentialregular';
+
  font-weight: regular; 
 font-size:2.1rem;
 color:$orange;
@@ -471,7 +537,7 @@ h4.lemonchicken
 font-family: 'lemonchickenregular';
 font-weight: regular; 
 font-size:1.7rem;
-color:$lemonchiffon;
+color:$sea;
 text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -535,7 +601,11 @@ flex-direction:column;
 flex-basis:350px;
 }
 
-
+div.contentsectionAdmin
+{
+display:flex;
+flex-direction:row;
+}
 
 
 
@@ -548,10 +618,86 @@ align-content:space-between;
 justify-content:center;
 background-image: url(../images/footer-image.png); 
 //reason have colour below is that above is apart from crosses transparent 
-background-color:$gold2;
+background-color:$lightblue;
  background-repeat: no-repeat;
 background-size: cover; 
 }
+
+
+
+ 
+
+iframe.x
+
+{
+width:90%;
+height:600px;
+}
+
+div.home
+
+{
+display:flex;
+flex-direction:column;
+opacity: 1;
+@include margin;
+flex-grow:2;
+}
+
+div.x
+
+{
+display:flex;
+flex-direction:column;
+@include margin;
+flex-grow:1;
+border:thin;
+border:solid;
+border-color:$brown;
+border-top-right-radius:15px;
+border-top-left-radius:15px;
+border-bottom-right-radius:15px;
+border-bottom-left-radius:15px;
+
+}
+
+
+
+div.adminpanel
+
+{
+display:flex;
+flex-direction:column;
+@include margin;
+background-color:$beige;
+
+flex-grow:1;
+border-top-right-radius:15px;
+border-top-left-radius:15px;
+border-bottom-right-radius:15px;
+border-bottom-left-radius:15px;
+}
+
+div.placeholder
+{
+display:flex;
+flex-direction:column;
+
+opacity: 1;
+@include margin;
+
+
+background-color:$beige;
+flex-basis:400px;
+flex-grow:3;
+border-top-right-radius:15px;
+border-top-left-radius:15px;
+border-bottom-right-radius:15px;
+border-bottom-left-radius:15px;
+}
+
+
+
 
 div.tiktok
 
@@ -661,9 +807,9 @@ display:flex;
 
 
  filter: brightness(89%);
-width:80%;
+width:89%;
 align-items:flex-start;
-border: 15px solid #555;
+border: 15px solid #000000;
 
 }
 
@@ -672,7 +818,7 @@ div.item  .img-fluid:hover
 display:flex;
 width:90%;
 align-items:flex-start;
-border: 5px solid #555;
+border: 5px solid #000000;
 transition:all 0.8s ease ;
 filter: brightness(99%);
 }
@@ -683,7 +829,7 @@ filter: brightness(99%);
 div.delGalleryImg
 {
 display:flex;
-flex-basis:300px;
+flex-basis:250px;
 flex-direction:column;
 background-colour:orange;
 margin-left:2rem;
@@ -705,8 +851,9 @@ div.delBlogImg
 {
 display:flex;
 flex-direction:column;
- flex-basis:100px;
+
 width:38%;
+height:auto;
 
 }
 
@@ -717,10 +864,12 @@ div.delBlogImg2
 display:flex;
 
 flex-direction:column;
-
-width:25%;
+flex-basis:100px;
+width:20%;
+height:auto;
 
 }
+
 
 
 
@@ -730,11 +879,14 @@ div.blogArticleImg
  flex-direction:column;
  
  margin-left:2rem;
- display: flex;
+ 
  flex-basis:220px;
  height:45%;
-  align-self: flex-start;
+ align-self: flex-end;
 }
+
+
+
 
 div.delBlogImg div.logo
 
@@ -755,12 +907,18 @@ div.delBlogImg2 div.logo
   align-self: flex-start;
 }
 
+.img-thumbnail
 
+{
+
+width:100px;
+}
 
 div.delBlogImg  .img-thumbnail 
 {
 left-margin: 1rem;
-width :100%;
+width :120px;
+ align-self: flex-end;
 }
 
 
@@ -782,6 +940,48 @@ div.headsection div.logo img {
 
 {
 
+
+
+
+
+
+
+
+div.delBlogImg2 
+{
+display:flex;
+
+flex-direction:column;
+
+
+
+width:50%;
+height:auto;
+
+}
+
+		   div.contentsectionAdmin
+{
+display:flex;
+flex-direction:column;
+
+
+}
+		
+div.adminpanel
+{
+flex-grow:1;
+margin-bottom:10px;
+}
+
+
+div.placeholder		
+
+{
+flex-grow:1;
+margin-bottom:10px;
+}
+		
 			div.a, div.b,div.c
 			{
 			height:90px;
@@ -832,7 +1032,26 @@ background-size: cover;
    display:flex;
    width:100%;
    }    
-           
+ 
+ div.home
+ {
+ display:flex;
+ flex-grow:1;
+ }
+   
+  div.x
+  {
+  display:flex;
+  flex-grow:1;
+  } 
+   
+   
+   iframe.x
+
+{
+width:90%;
+height:270px;
+}        
                
 }
 
@@ -840,6 +1059,15 @@ background-size: cover;
 
 
 {
+iframe.x
+
+{
+width:90%;
+height:270px;
+}
+
+
+
 
 					div.a, div.b,div.c
 			{
@@ -855,7 +1083,7 @@ background-size: cover;
 				  
 				}
 
-  h4.aaargh, h4.newtimesroman,h4.antic,h4.anticSlab,  h4.quintessentialViolet,  h4.quintessentialBlue,  h4.amadeus,h4.kingsthingsLite,        h4.newtimes,    h4.optimanormal, h4.magnolia,h4.caroni  ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  
+h4.aaargh,   h4.newtimesroman,h4.antic,h4.anticSlab,  h4.quintessentialViolet,  h4.quintessentialBlue,  h4.amadeus,h4.kingsthingsLite,        h4.newtimes,    h4.optimanormal, h4.magnolia,h4.caroni  ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  
                
                {
                font-size: 1.7rem;
@@ -903,6 +1131,9 @@ background-size: cover;
 @media (min-width:576px) and (max-width:768px) and  (orientation: portrait) 
 
 {
+            
+            
+            
             
             div.a, div.b,div.c
 			{
@@ -959,13 +1190,20 @@ background-size: cover;
    width:100%;
    }    
    
-   
+   iframe.x
+
+{
+width:90%;
+height:270px;
+}
    
 }
 
 @media (min-width:769px) and (max-width:992px) and  (orientation: portrait) 
 
 {
+
+
 
   div.a, div.b,div.c
 			{
@@ -977,11 +1215,11 @@ background-size: cover;
 
 h1.caroni, h1.lemonchicken  ,h1.amadeus,h1.quintessential
 				 {
-				  font-size: 3.5rem;
+				  font-size: 3.0rem;
 				}
 
  
-h4.aaargh, h4.newtimesroman,h4.antic,h4.anticSlab, h4.quintessentialViolet, h4.quintessentialBlue, h4.amadeus, h4.kingsthingsLite    h4.newtimes,     h4.optimanormal,  h4.magnolia,h4.caroni ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  
+ h4.aaargh,h4.newtimesroman,h4.antic,h4.anticSlab, h4.quintessentialViolet, h4.quintessentialBlue, h4.amadeus, h4.kingsthingsLite    h4.newtimes,     h4.optimanormal,  h4.magnolia,h4.caroni ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  
                
                {
                font-size: 2.2rem;
@@ -1004,6 +1242,16 @@ background-size: cover;
    display:flex;
    flex-direction:column;
    }            
+     
+     iframe.x
+
+{
+width:98%;
+height:300px;
+
+
+
+}
                
    div.e
    {
@@ -1038,8 +1286,32 @@ h1.caroni, h1.lemonchicken ,h1.amadeus,h1.quintessential
 				}
 
 
+div.tiktok
+{
+display:flex;
+flex-direction:row;
+}
 
 
+div.x
+{
+display:flex;
+flex-grow:1;
+}
+
+div.home
+{
+display:flex;
+flex-grow:2;
+}
+
+iframe.x
+
+{
+width:90%;
+height:600px;
+
+}
 
 
 }
@@ -1055,12 +1327,48 @@ h1.caroni, h1.lemonchicken ,h1.amadeus,h1.quintessential
 
 @media (min-width: 700px) and (max-width: 1024px) and (orientation: landscape) {
 
-h1.caroni, h1.lemonchicken, h1.amadeus
+h1.caroni, h1.lemonchicken, h1.amadeus, h1.quintessential
 				 {
 				  font-size: 3.7rem;
 				}
+div.tiktok
+{
+display:flex;
+flex-direction:row;
+}
+
+
+div.x
+{
+display:flex;
+flex-direction:row;
+flex-grow:1;
+}
+div.home
+{
+display:flex;
+flex-grow:1;
 
 }
+
+
+iframe.x
+
+{
+width:90%;
+height:400px;
+
+}
+
+
+
+
+
+}
+
+
+
+
 
 
 @media (min-width: 1025px) and  (orientation: landscape) {
@@ -1071,12 +1379,31 @@ h1.caroni,  h1.lemonchicken ,h1.amadeus,h1.quintessential
 				}
 
 
+div.tiktok
+{
+display:flex;
+flex-direction:row;
+}
 
 
+div.x
+{
+display:flex;
+flex-grow:1;
+}
 
+div.home
+{
+display:flex;
+flex-grow:1;
+}
 
+iframe.x
 
+{
+width:90%;
+height:600px;
 
-
+}
 
 }

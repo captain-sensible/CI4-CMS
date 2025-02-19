@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use  \App\Models\Setupmodel;
+use  \App\Models\SetupModel;
 use  \App\Models\UserModel;
 use \App\Controllers\Utility;
 
@@ -71,13 +71,13 @@ protected $encryptedUserPw;
      $this->userNameNWS =   $this->utilityHandle->removeWhiteSpace($this->userName);
      $this->userPasswordNWS = $this->utilityHandle->removeWhiteSpace($this->userPassword);
      $this->encryptedUserPw  = password_hash($this->userPasswordNWS, PASSWORD_DEFAULT);
-     $this->setupModelHandle = new Setupmodel();
+     $this->setupModelHandle = new SetupModel();
 			  try
 				 {
 				$result= $this->setupModelHandle ->adminUserUpdate($this->adminId, $this->userNameNWS, $this->encryptedUserPw); 
 				if($result == true)
 											{
-											 $session->setFlashdata('info', 'password reset looks successful ; it will not take effect until you log out then log in with new credentials ,make a note user :  '.$this->userNameNWS.'   password :  '.$this->userPasswordNWS );
+											 $session->setFlashdata('info', 'password reset looks successful ; it will not take effect until you log out then log in with the new credentials ,make a note : <br><br> new username  :  '.$this->userNameNWS.' <br><br>new  password :  '.$this->userPasswordNWS );
 											 return redirect()->route('admin');
 											 exit();
 											

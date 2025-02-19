@@ -12,11 +12,20 @@
 
 			$font= "newtimes";
 			
-echo "<h4 class = \"".$blog['font']."\" ><p>".$blog['title']."</p></h4>"."Posted : <p> ".$blog['date']."</p>"; 
+//echo "<h4 class = \"".$blog['font']."\" ><p>".$blog['title']."</p></h4>"."Posted : <p> ".$blog['date']."</p>"; 
+
+echo "<blockquote class=\"prophet\">" ;
+
+echo "<h4 class = \"".$blog['font']."\" >".$blog['title']."</h4>"."<h4 class=\"bible\"> Posted :  ".$blog['date']."</h4>"; 
+
+
+echo "</blockquote>";
+
+
 echo "<br>";
 echo "<br>";
-echo "<div class=\"delBlogImg\">";
-echo "   <div class =\"blogArticleImg\">  <img class = \"img-fluid \"                <img src =".base_url('blogImages')."/".esc($blog['image']).">  </div>"; 
+echo "<div class=\"delBlogImg2\">";
+echo "   <div class =\"blogArticleImg\">  <img class = \"img-fluid \"   align= \"left\"             <img src =".base_url('blogImages')."/".esc($blog['image']).">  </div>"; 
 echo "</div>";
 
 

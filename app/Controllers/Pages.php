@@ -40,7 +40,8 @@ $this->myDate = date("d/m/Y",$this->myTime);
  public function showme($page)
  {
 	
-	
+	define("PATH", $page);
+	echo PATH;
  
 $this->logic1= file_exists(APPPATH."Views/".$page.".php");
 

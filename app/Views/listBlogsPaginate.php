@@ -7,8 +7,10 @@
    
            
     <div class="mx-2">
-	<h4 class ="caroni">	<p>List of blogs is as follows</p></h4>
-
+	<br><br>
+	
+	<h4 class ="caroni">	List of blogs is as follows</h4>
+<br><br>
 			 <?php 
 
           

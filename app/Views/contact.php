@@ -24,10 +24,8 @@ be emailed to one of our admin. So we are asking for your email so we can get ba
  <input type="input" name="name" id ="theirName" class="form-control"/><br />
   </div>
     
-			 <div class="form-group ms-2"> 
-			<label for="your name">Your Email or Phone Number please </label> 
-			 <input type="input " class="form-control" id="theirEmail" name ="email" placeholder=" " required ="true"> 
-			 </div> 
+		<div class ="ms-2">If you use the form below entering your name , your email address and your message, then the data from the form will 
+be emailed to one of our admin. So we are asking for your email so we can get back to you. </div><br><br>
     
  
    

@@ -1,7 +1,7 @@
 
 <br><br>
 
-<?=$this->extend('webLayout') ?>
+<?=$this->extend('adminLayout') ?>
 			<?=$this->section('content') ?>
             <div class="mx-2">As you can see the content of the blog as it is in the database is populated out, with the existing text. 
           <p style="color:red">  do not but html markup around the text in the title box , because its already coded for style</p>  You can use :<br> 
@@ -15,22 +15,11 @@
              
           <p style ="color:green">   &#60;h4 class=kaushanscript&#62;   some text     &#60;&#47;h4&#62;  </p>
              
-             Available fonts are : 
-                <h4 class = "kaushanscript"> h4 kaushanscript </h4> 
-				<h4 class="caroni">H4 caroni </h4>
-				<h4 class="quintessential">h4 quintessential  </h4>
-				<h4 class ="quintessentialBlue"> h4 quintessentialBlue</h4>	
-					<h4 class ="quintessentialViolet">h4 quintessentialViolet</h4>
-					
-					<h4 class="dancing-script-ot"> h4 dancing script  </h4>
-					<h4 class="shangrilanReg"> h4 shangrilan  </h4>
-					<h4 class="magnolia">h4 magnolia  </h4>
-					<h4 class="optimanormal">h4 optima normal  </h4>
-					<h4 class ="newtimes">h4 new times roman  </h4>
-					 <h4 class ="lemonchicken">h4  lemon chicken </h4>
-					<h4 class="antic">h4 antic</h4>
-					<h4 class="anticSlab">anticSlab</h4>
-			          <h4 class ="aaargh">aaargh</h4>
+             For font styles go to <a href ="<?php echo base_url('examplefonts');?>"> fonts</a> 
+               
+                
+		
+			          
 			
 			
 			
@@ -38,7 +27,7 @@
 			
 			
 			
-			<p>	You might notice i havent coded to change picture. Because if you want to do that just delete a whole blog and start again .	</p>     <br><br>
+			<p>	You might notice i havent coded in the edit ,to change picture. Well if you have everything wrong , have a coffee  delete the   blog and start again .	</p>     <br><br>
 			<h1 style ="color:red";>  <?php echo session()->getFlashdata('info'); ?></h1>
 			
 			</div>
@@ -47,20 +36,56 @@
 			 <?= form_open('doEditBlog'); ?>
 		<?= csrf_field() ?>
 
-			    <div class="form-group  ms-2"> 
+			    <div class="form-group mx-2"> 
 			    <label for="title">Blog Title</label>
 			    <input type="input" name="title" id ="title" class="form-control" value="<?php echo htmlspecialchars($blog['title']); ?>"/><br />
 			    </div>
     
+                <div class="form-group  mx-2"> 
+					
+					<label for="date">Date </label>
+					<input type ="input" name ="date" id = "date"  class="form-control" value="<?php echo htmlspecialchars($blog['date']); ?>"/><br />
+					</div>
     
-                             <div class="form-group  ms-2"> 
-			    <label for="title">Id </label>
-			    <input type="input" name="Id" id ="title" class="form-control" value="<?php echo $blog['Id']; ?>"/><br />
+    
+    
+    
+    
+                             <div class="form-group  mx-2"> 
+			    <label for="title">Id for blog is here but hidden,so its not messed up by mistake</label>
+			    <input type="hidden" name="Id" id ="title" class="form-control" value="<?php echo $blog['Id']; ?>"/><br />
 			    </div>
+    <br><br>
+                 <div class=  "form-group mx-3">     
+					 <label for="font">Choose New Font for title :</label>
+					
+					
+					 <select name="font" id="fonts">
+                  <option value="quintessential">quintessential</option>
+				 <option value="kaushanscript">kaushanscript</option>
+				 <option value="optimanormal">optimanormal</option>
+				 <option value="dancing-script-ot">dancing-script-ot</option>
+				 <option value="newtimesroman">new times roman </option>
+				 <option value="times-new-roman">Times new Roman </option>
+				 <option value="shangrilanReg">shangrilanReg</option>
+				 <option value="aaargh">aaargh Font</option>
+				 <option value="lemonchicken">lemonchicken </option> 
+				 <option value="quintessentialBlue">quitessentialBlue</option>
+				 <option value="quintessentialViolet">quintessentialViolet</option>
+				 <option value="antic">antic </option>
+				 <option value="anticSlab">anticSlab</option>
+				  <option value="magnolia">magnolia</option>
+				  <option value="caroni">caroni</option>
+				  <option value="balgruf">balgruf</option>
+				  <option value= "newtimes"> new times </option>
+				
+				 </select>
+                  </div>   
+                   
+                    
+                  <br><br>         
     
-                           
-    
-			    <div class="form-group  ms-2"> 
+			    <div class="form-group  mx-2"> 
 			    <label for="theArticle">Blog Article </label> 
 			    <textarea class="form-control" id ="thArticle" rows="7" cols ="45" name ="article" required ="true"  ><?php echo htmlspecialchars($blog['article']); ?></textarea>
 			   </div>

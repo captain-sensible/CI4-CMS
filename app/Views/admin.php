@@ -1,7 +1,7 @@
 
 <br><br>
 
-<?=$this->extend('webLayout') ?>
+<?=$this->extend('adminLayout') ?>
 			<?=$this->section('content') ?>
 
 
@@ -12,37 +12,12 @@
 				
 							
 						
-						
-						<p>
-							
-						
-							
-						To create a <b>new blog</b> go to :   <a href ="newblog">new blog </a> <br>
-						To <b>edit a blog</b> go to :  <a href ="editBlogs">edit blogs</a>  <br>
-						To <b>delete a blog </b> go to : <a href ="removeBlog">delete a blog </a> <br><br><br>
-						
-						
-						To <b>remove an Image from Gallery  </b> go to <a href ="delGallery">Remove from Gallery</a><br>
-						
-						To <b>add Gallery Image  </b> go to <a href ="addGallery">Add Gallery  </a><br>
-						
-						
-						To <b>logout go to </b>: <a href ="logout">logout</a><br>
-						
-						
-						To <b> reset admin password go to </b><a href = "resetPW">resetAdminPW </a></br>
-						
-						
-						
-						</p>
-					
-						<h5 style ="color:red; margin-left:10px">direct url to get back to this page ,if logged in is:  /admin </h5>		
-							
+						<h4 class ="bible">This is a place holder page  , it will be replaced by pages to do tasks when you choose from menu left</h4> 					
 							
 							
 						<h4 style ="color:green; margin-left:10px">	<?php echo $info; ?></h4>
-						 
-								       	 <h1 style ="color:red";>  <?php echo session()->getFlashdata('info'); ?></h1>
+						 <br><br>
+								       	 <h4 style ="color:red";>  <?php echo session()->getFlashdata('info'); ?></h4>
 	
 							
 						</p>     <br><br>

@@ -44,6 +44,8 @@ protected $Id;
 protected $title;
 protected $article;
 protected $slug;
+protected $font;    
+protected $date;    
     
     
 public function getArticle($slug)
@@ -178,11 +180,12 @@ public function getArticle($slug)
        
        
        }
-     public function amendBlog($blogId,$title,$article,$slug)
+     public function amendBlog($blogId,$title,$article,$slug,$font,$date)
      
      
      {
-     
+	$this->date	 =$date;
+     $this->font =$font;
      $this->Id= $blogId;
      $this->title=  $title;
      $this->article =  $article;
@@ -190,7 +193,9 @@ public function getArticle($slug)
      $data =[
      'title'=>$this->title,
      'article'=>$this->article,
-     'slug'=>$this->slug
+     'slug'=>$this->slug,
+     'font'=>$this->font,
+     'date'=>$this->date
      ];
    $logic=   $this->update($this->Id,$data);
    return $logic;

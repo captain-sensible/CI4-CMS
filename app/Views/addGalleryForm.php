@@ -1,7 +1,7 @@
 
 <br><br>
 
-<?=$this->extend('webLayout') ?>
+<?=$this->extend('adminLayout') ?>
 			<?=$this->section('content') ?>
             <div class="mx-2 ">
 			<h4><p  style ="color:green">	In the form below  you enter data such as the title (description of image being uploaded). This will be

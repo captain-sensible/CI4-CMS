@@ -6,7 +6,7 @@
 class CheckSpam
 {
 
-protected $keywords = array('http','www','//', 'viagra','late client','.com','.net','promotion ', 'app','free consultation','Toenail Clippers','free shipping', 'free shipping !');
+protected $keywords = array('http','www','//', 'viagra','late client','.com','.net','promotion ', 'app','free consultation','Toenail Clippers','free shipping', 'free shipping !','Ã','YouTube','Î','É','Salam','Zdravo','cijenu');
 protected $commentText;
 protected $logic;
 protected $hasKeyword;			

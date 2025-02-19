@@ -35,6 +35,9 @@ class Home extends BaseController
            
            {
 			
+		
+			
+			
 			
 			
 			$data= [

@@ -1,7 +1,7 @@
 
 <br><br>
 
-<?=$this->extend('webLayout') ?>
+<?=$this->extend('adminLayout') ?>
 			<?=$this->section('content') ?>
 
 
@@ -41,16 +41,15 @@
   <option value="shangrilanReg">Shangrilan</option>
   <option value="magnolia">Magnolia</option>
   <option value="optimanormal">Optima Normal</option>
-  <option value="newtimes">New Times Roman</option>
+  <option value="newtimesroman">New Times Roman</option>
+  <option value="times-new-roman">Times New Roman</option>
   <option value="lemonchicken">Lemon Chicken</option>
   <option value="kingsthingsLite">Kings Things Lite</option>
 <option value="amadeus">Amadeus</option>
 <option value="antic">Antic</option>
 <option value="anticSlab">AnticSlab</option>
 <option value="aaargh"> aaargh</option>
-
-
-</select>
+ </select>
 	</div>		      
 			      
 			      
@@ -68,9 +67,18 @@
 			
 			
 			
-			   <div class="form-group  ms-2"> 
+			   <div class="form-group  mx-2"> 
+			  <label for ="image">If you are going to use embed code for a video, then this image can be an avatar of post writer; you can use the same image each time, since
+			  a time stamp is pre-fixed to name of image, so they will always be different. If your not going to have video embed code, this use this to upload an image that is 
+			  a visual representation of  blog </label><br><br>
 			    <input type="file" class="btn btn-info" name="userfile" />
 			     </div>
+	          
+	          
+	          
+	          
+	          
+	          
 	           <br><br>
 			    <div class="form-group ms-2"> 
 			   
@@ -78,23 +86,8 @@
 			   
 			   <br><br>
 			   </div>
-                        <h3>From drop down choice above choose a font for blog title they are as follows </h3>
-                <h4 class = "kaushanscript"> h4 kaushanscript </h4> 
-				<h4 class="caroni">H4 caroni </h4>
-				<h4 class="quintessential">h4 quintessential  </h4>
-				<h4 class ="quintessentialBlue"> h4 quintessentialBlue</h4>	
-					<h4 class ="quintessentialViolet">h4 quintessentialViolet</h4>
-					
-					<h4 class="dancing-script-ot"> h4 dancing script  </h4>
-					<h4 class="shangrilanReg"> h4 shangrilan  </h4>
-					<h4 class="magnolia">h4 magnolia  </h4>
-					<h4 class="optimanormal">h4 optima normal  </h4>
-					<h4 class ="newtimes">h4 new times roman  </h4>
-					 <h4 class ="lemonchicken">h4  lemon chicken </h4>
-					<h4 class="antic">h4 antic</h4>
-					<h4 class="anticSlab">anticSlab</h4>
-			        <h4 class="newtimesroman">newtimes roman</h4>
-			        <h4 class="aaargh">aaargh</h4>
+                       
+                
 			   <div class="form-group  ms-2"> 
 			 <h1 style ="color:red";>  <?php echo session()->getFlashdata('info'); ?></h1>
 			   </div>
@@ -103,7 +96,7 @@
 			 
 
 			<br><br>
-				<?php echo $date; ?>	  
+				 
 			<?=$this->endSection()?>
 			 
 			 

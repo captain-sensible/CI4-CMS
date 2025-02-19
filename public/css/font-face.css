@@ -6,10 +6,19 @@
 
 @font-face{
 font-family:'times-new-roman';
-src:url('../fonts/times-new-roman/Times-New-Roman.otf')format ('otf'),
+src:url('../fonts/times-new-roman/Times-New-Roman.otf')format ('otf');
 font-weight:lighter;
 font-style:normal;
 }
+
+
+@font-face{
+font-family:'balgruf';
+src:url('../fonts/balgruf/Balgruf.otf')format ('otf');
+font-weight: normal;
+font-style:normal;
+}
+
 
 
 

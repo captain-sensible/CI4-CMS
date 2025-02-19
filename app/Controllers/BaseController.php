@@ -54,7 +54,7 @@ abstract class BaseController extends Controller
      public function __construct()
      {
 		 
-		helper (['text','date','uri','html','form','secuity','numner']);
+		helper (['text','date','uri','html','form','security','number']);
 		$this->theTime =now('Europe/London'); 
 		
 	} 
