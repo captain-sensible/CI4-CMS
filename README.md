@@ -1,14 +1,30 @@
-# CI4-CMS
-light Content Management System using CodeIgniter4
 
 # CodeIgniter C.M.S
 
-A very light blog engine CMS alternative to W.P using Codeigniter 4.5.7 (December 31st  2024) , Bootstrap 5.3 and Sqlite3 database.
+A very light blog engine CMS alternative to W.P using Codeigniter 4.6.0  Bootstrap 5.3 and Sqlite3 database. There is a grunt file to work from web root scss. Breakpoints so is mobile responsive
 
-I was in the process of updating the section of CodeIgniter4 in my book Arch Linux 
+
+<img src ="https://andrinaboutique.com/images/mobile-responsive.png" height="500px">
+
+
+
+
+I have recently done a Laravel 11 versions at :
+<https://sourceforge.net/projects/laravelblogengine/>
+
+
+If you would like  to development with Ci4 on Arch linux this book will help:<br>
 [Arch book](https://www.amazon.co.uk/dp/B0DX1MHS9J)
 
-Also I just got a new laptop and had to go through all the configuration needed to install software, create virtualhost files and edit the Apache httpd.conf file and also the /etc/hosts file . So for those who want to have CI4-CMS running on Apache web server, i have uploaded my configuration files. You will have to edit circa line 20 in /app/config/App.php this line:
+Apart from here, im also updating code as i go on github :<br>
+[code on github](https://github.com/captain-sensible/CI4-CMS)
+
+
+ I just got a new laptop and had to go through all the configuration needed to install software, create virtual host files and edit the Apache httpd.conf file and also the /etc/hosts file . So for those who want to have CI4-CMS running on Apache web server, i have uploaded my configuration files, which you can refer to.
+
+
+
+You will have to edit circa line 20 in /app/config/App.php this line:
 
   public string $baseURL = 'http://127.0.0.4/';
   
@@ -16,16 +32,13 @@ Also I just got a new laptop and had to go through all the configuration needed 
 
 
 
-In this release I have created 2 example blogs, the list can be seen by clicking on blogs from menu. You will see on clicking on either blog link , that a video will run (assuming you are connected to internet) video is simply included into a blog using embed code from  youtube.com on one blog and tiktok in the other. You can see the div layout im using by editing  a blog and looking at the article 
+In this release I have created 2 example blogs, the list can be seen by clicking on blogs from menu. You will see on clicking on either blog link , that a video will run (assuming you are connected to internet) video is simply included into a blog using embed code from  youtube.com on one blog and tiktok in the other.
 
-Now uploading videos to either youtube or tiktok is great but as of yet, the content can not be indexed by Google and all you can do is add rudimentary tags. 
+Now uploading videos to either youtube or tiktok is great but as of yet , the content can not be indexed by Google and all you can do is add rudimentary tags. Now by having a video in a blog with accompanying text , its possible to elaborate whats going on in the video, and using key words that can be indexed. So you basically get the best of both worlds. If you paste the URL to the video in facebook for instance readers will be able to view both the video and accompanyintg text. So you dont need to bother to actually uplaod the video to facebook directly anymore
 
-But by having a video in a blog with accompanying text, its possible to elaborate whats going on in the video, and using key words means the text will be found and indexed by for instance Google. 
-
-So you basically get the best of both worlds. You can also paste the blog  URL into  Facebook; when reader click on the post they will be taken to the blog page.So you dont need to bother to actually upload the video to facebook directly anymore. Another advantage is that Facebook has pretty lousy security so if your account gets hacked, you dont loose anything since the videos are not uplaoded directly to Facebook 
-
-I did have Login for admin hidden, but since my project is aimed at those that will twaek and edit; you can always take login out of the navbar.php . Also i found it much easier, to click between viewing and editing code . 
-
+Login for admin is hidden 
+from those that dont know the URL ( login is at URL  domainName.com/blackcat);  the login form for admin has a captcha, and coded so that 5 failed attempts to login results
+ in a brush off away from site. 
  
 If your like me , you may like to play then read the instructions . 
 So download the zip file to your Desktop and unzip  . Whats inside ?
@@ -51,9 +64,9 @@ So download the zip file to your Desktop and unzip  . Whats inside ?
 └── writable<br>
  
  
-The core  PHP framework I have updated to 4.5.7 so its fiarly  recent as of 31st December   2024 .
+The core  PHP framework I have updated to 4.5.0 so its very recent as of May 17  2024 .
 
-At the moment Composer.json  is specifying :   `"codeigniter4/framework": "4.5.7"`
+At the moment Composer.json  is specifying :   `"codeigniter4/framework": "4.6.0"`
 
 
 When upgrading I prefer to edit the composer.json file, specifying  the newer version (by one up) and run composer update command. 
@@ -76,23 +89,30 @@ Note in app/Config/App.php , the url has been set to :
 
  ` public string $baseURL = 'http://localhost:8080';`
 
-If you have the system in Apache then you will have to set that up and edit the above. I have my development web serving on 127.0.0.4:
+If you have the system in Apache then you will have to set that up and edit the above. I have my development web serving on 127.0.0.9:
 
-  `public string $baseURL = 'http://127.0.0.4/';	`
+  `public string $baseURL = 'http://127.0.0.9/';	`
  
 We just fired up spark and that So lets use the output url it gave us that HTTP requests will be listened on   type http://localhost:8080  directly into our browser address bar  :<br><br>
  
 
 <br><br>
 <img src = "https://andrinaboutique.com/images/localhost8080.jpg" width ="500px">
+ 
+you should see or a variation of that : 
+ 
 
-  Now to make things easier i have set up a user (with role of admin powers ) as follows: <br>
+
+  
+Now to make things easier i have set up a user (with role of admin powers ) as follows: <br>
 
 	User : Demo 
 	Password : Demo  
 
-So click on login entry in main menu and  enter those at the  text boxes you will see 
-along with the captcha numbers.  
+So enter those into text box at this :<br><br>
+
+<code>	http://localhost:8080/blackcat </code>
+
 You should then  see :
 
 
@@ -102,16 +122,43 @@ The password is encrypted before its stored in database. The code will check if 
 the login textbox  whether  it matches the password (that is encrypted ) in the database. 
  
  
-Once logged in, your are taken to the admin section , where  you can change the user name and password to 
-something else . Your new admin  user handle and password will replace the old ones .
+Once logged in, your are taken to the admin page, where  you can change the user name and password to 
+something else . Your new admin  user handle and password will replace the old ones .They wont work until you hit the logout link, to log out and lg back in using new credentials
  
 The link to do that is called "resetAdminPw" .
  
+If you get things working  on local dev, you can just zip up everything 
+and load to your live hosting as appropriate thats what i did .This is the directory structure of a live working website using  CI4-CMS
+ 
+<img src = "https://andrinaboutique.com/images/webstructure.png" width ="500px"><br><br>
+
+ Basically the name of the sub directory will be the same as your domain name you want something like myWeb.com.
+ 
+ From from my cPanel hosting i just added a new domain name; set up add domain/subdomain and edited so that 
+ document root of my web is pointing at the public directory
 
  
 
+As you can see , i simply make the public directory , the web document root. 
+There is no need to mess about with the .htaccess file except when you want to install SSL i.e use secure socket(https)
+ on your web instead of not secure (http) by leveraging "lets encrypt". 
+ 
+IN which case in the .htaccess file in public  change top line below to bottom line <br><br>
 
+	RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+	RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L] 
 
+ 
+Other things you need to do are  development to production. 
+If you read the codeIgniter docs, you will know that you need to switch to production mode .You can do that 
+by changing development to production in this line of the .env file
+  
+	CI_ENVIRONMENT = development
+
+also change your web address to domain name in <br>
+  
+	the line number 20 :  
+	public string $baseURL = 'http://localhost:8080'; <br>
  
  
   
@@ -157,6 +204,7 @@ See https://gruntjs.com/
 
 Forum for CodeIgniter is : [CodeIgniter Forum]https://forum.codeigniter.com/ my handle is captain-sensible on there
 
+any issues you can try me at andybrookestar@gmail.com
 
 
 
@@ -167,16 +215,27 @@ Forum for CodeIgniter is : [CodeIgniter Forum]https://forum.codeigniter.com/ my 
 
 
 
+
+
+
+
+In the  blog creation  form , don't put html tags around  text in title input field, just put title name. 
+Thats because style for blog  title is already coded in.edit the contoller Sendmail.php to use your 
+email that will send message ( ijust use gmail) and the email address of admin where you want message to go 
+
+see below for example tutorial of PHPMailer 
+
+[PHPMailer]https://github.com/PHPMailer/PHPMailer/wiki/Tutorial
 
 
 The  Gruntfile.js is at web root :
 
 commands to use are:
 
-	grunt sass
+'grunt sass'
 
 
-	grunt watch
+'grunt watch'
 
 
 The command grunt sass does a one time conversion of scss code  of custom.scss to custom.css and places the custom.css in the right place (public/css).
@@ -187,21 +246,16 @@ grunt watch will keep looking for changes in the scss code , convert and update 
 But you will need to install stuff system wide ; you will need to have nodejs, grunt-cli in my case on Arch ruby  
 installed system wide and  then project wise  from a command line , with context location web root  :
 
-
-	$npm init
-	$npm install
+<code>
+$npm init
+$npm install
 </code>
 for grunt see 
  See https://gruntjs.com/
-
- Also i didn't upload vendor nor node_modules so , you will have to run from root of  web app, using a  command line terminal:
-
- `npm install`
- `composer update`
 
 Forum for CodeIgniter is : https://forum.codeigniter.com/
 
 any issues you can try me at andybrookestar@gmail.com
 
 If you want to have a go with CodeIgniter4 web development with Arch Linux, this book might help :
-[Arch Linux ]https://www.amazon.com/dp/B0DHXZNHZH   
+[Arch Linux ](https://www.amazon.co.uk/dp/B0DX1MHS9J)
