@@ -21,12 +21,12 @@ use CodeIgniter\Database\Exceptions\DataException;
 use CodeIgniter\Database\Query;
 use CodeIgniter\DataConverter\DataConverter;
 use CodeIgniter\Entity\Entity;
+use CodeIgniter\Exceptions\InvalidArgumentException;
 use CodeIgniter\Exceptions\ModelException;
 use CodeIgniter\I18n\Time;
 use CodeIgniter\Pager\Pager;
 use CodeIgniter\Validation\ValidationInterface;
 use Config\Feature;
-use InvalidArgumentException;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionProperty;
@@ -379,7 +379,7 @@ abstract class BaseModel
             $this->converter = new DataConverter(
                 $this->casts,
                 $this->castHandlers,
-                $this->db
+                $this->db,
             );
         }
     }
@@ -1081,7 +1081,7 @@ abstract class BaseModel
                 if ($updateIndex === null) {
                     throw new InvalidArgumentException(
                         'The index ("' . $index . '") for updateBatch() is missing in the data: '
-                        . json_encode($row)
+                        . json_encode($row),
                     );
                 }
 

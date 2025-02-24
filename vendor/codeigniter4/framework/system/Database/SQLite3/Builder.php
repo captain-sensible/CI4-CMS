@@ -16,7 +16,7 @@ namespace CodeIgniter\Database\SQLite3;
 use CodeIgniter\Database\BaseBuilder;
 use CodeIgniter\Database\Exceptions\DatabaseException;
 use CodeIgniter\Database\RawSql;
-use InvalidArgumentException;
+use CodeIgniter\Exceptions\InvalidArgumentException;
 
 /**
  * Builder for SQLite3
@@ -196,8 +196,8 @@ class Builder extends BaseBuilder
                         " = {$value}" :
                         " = {$alias}.{$value}"),
                     array_keys($updateFields),
-                    $updateFields
-                )
+                    $updateFields,
+                ),
             );
 
             $this->QBOptions['sql'] = $sql;
@@ -268,10 +268,10 @@ class Builder extends BaseBuilder
                     static fn ($value): string => 'SELECT ' . implode(', ', array_map(
                         static fn ($key, $index): string => $index . ' ' . $key,
                         $keys,
-                        $value
+                        $value,
                     )),
-                    $values
-                )
+                    $values,
+                ),
             ) . "\n";
         }
 

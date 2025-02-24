@@ -15,13 +15,13 @@ namespace CodeIgniter\Router;
 
 use Closure;
 use CodeIgniter\Autoloader\FileLocatorInterface;
+use CodeIgniter\Exceptions\InvalidArgumentException;
 use CodeIgniter\HTTP\Method;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Router\Exceptions\RouterException;
 use Config\App;
 use Config\Modules;
 use Config\Routing;
-use InvalidArgumentException;
 
 /**
  * @todo Implement nested resource routing (See CakePHP)
@@ -634,7 +634,7 @@ class RouteCollection implements RouteCollectionInterface
             @trigger_error(
                 'Passing lowercase HTTP method "' . $verb . '" is deprecated.'
                 . ' Use uppercase HTTP method like "' . strtoupper($verb) . '".',
-                E_USER_DEPRECATED
+                E_USER_DEPRECATED,
             );
         }
 
@@ -791,7 +791,7 @@ class RouteCollection implements RouteCollectionInterface
             // Merge options other than filters.
             $this->currentOptions = array_merge(
                 $this->currentOptions ?? [],
-                $options
+                $options,
             );
         }
 
@@ -1026,7 +1026,7 @@ class RouteCollection implements RouteCollectionInterface
                 @trigger_error(
                     'Passing lowercase HTTP method "' . $verb . '" is deprecated.'
                     . ' Use uppercase HTTP method like "' . strtoupper($verb) . '".',
-                    E_USER_DEPRECATED
+                    E_USER_DEPRECATED,
                 );
             }
 
@@ -1382,7 +1382,7 @@ class RouteCollection implements RouteCollectionInterface
         foreach ($placeholders as $index => $placeholder) {
             if (! isset($params[$index])) {
                 throw new InvalidArgumentException(
-                    'Missing argument for "' . $placeholder . '" in route "' . $from . '".'
+                    'Missing argument for "' . $placeholder . '" in route "' . $from . '".',
                 );
             }
 
@@ -1506,7 +1506,7 @@ class RouteCollection implements RouteCollectionInterface
                     '/\$X/',
                     static fn ($m): string => '$' . $i,
                     $to,
-                    1
+                    1,
                 );
             }
         }
@@ -1563,13 +1563,20 @@ class RouteCollection implements RouteCollectionInterface
      * Compares the hostname passed in against the current hostname
      * on this page request.
      *
-     * @param string $hostname Hostname in route options
+     * @param list<string>|string $hostname Hostname in route options
      */
     private function checkHostname($hostname): bool
     {
         // CLI calls can't be on hostname.
         if (! isset($this->httpHost)) {
             return false;
+        }
+
+        // Has multiple hostnames
+        if (is_array($hostname)) {
+            $hostnameLower = array_map('strtolower', $hostname);
+
+            return in_array(strtolower($this->httpHost), $hostnameLower, true);
         }
 
         return strtolower($this->httpHost) === strtolower($hostname);
@@ -1773,7 +1780,7 @@ class RouteCollection implements RouteCollectionInterface
             @trigger_error(
                 'Passing lowercase HTTP method "' . $verb . '" is deprecated.'
                 . ' Use uppercase HTTP method like "' . strtoupper($verb) . '".',
-                E_USER_DEPRECATED
+                E_USER_DEPRECATED,
             );
         }
 

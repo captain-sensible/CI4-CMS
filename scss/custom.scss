@@ -368,7 +368,7 @@ color:$orange;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-h4.newtimesroman
+h4.times-new-roman
 {
 font-family:'times-new-roman';
 font-size:2.3rem;
@@ -409,14 +409,16 @@ h4.amadeus {
   }
 
 
-h4.newtimes
+h4.newtimesroman
 {
+
+
 font-family: 'times_new_romanregular';
 
 font-weight: lighter; 
-font-size:2.7rem;
-color:$christBlue;
-text-shadow: -1px 0 black, 0 1px $brown, 1px 0 black, 0 -1px black;
+font-size:2.5rem;
+color:$sea;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 h4.kingsthingsLite
@@ -584,6 +586,18 @@ margin-left:0.5rem;
 color:$mustard;
  text-shadow: -1px 0 black, 0 1px $burgundy, 1px 0 black, 0 -1px black;
 }
+
+h4.balgruf
+
+{
+font-family:'balgruf';
+font-weight: regular; 
+font-size:2.3rem;
+margin-left:0.5rem;
+color:$green;
+ text-shadow: -1px 0 black, 0 1px $burgundy, 1px 0 black, 0 -1px black;
+}
+
 
 
 div.headsection {

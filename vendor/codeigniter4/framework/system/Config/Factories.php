@@ -14,8 +14,8 @@ declare(strict_types=1);
 namespace CodeIgniter\Config;
 
 use CodeIgniter\Database\ConnectionInterface;
+use CodeIgniter\Exceptions\InvalidArgumentException;
 use CodeIgniter\Model;
-use InvalidArgumentException;
 
 /**
  * Factories for creating instances.
@@ -106,7 +106,7 @@ final class Factories
             }
 
             throw new InvalidArgumentException(
-                'Already defined in Factories: ' . $component . ' ' . $alias . ' -> ' . self::$aliases[$component][$alias]
+                'Already defined in Factories: ' . $component . ' ' . $alias . ' -> ' . self::$aliases[$component][$alias],
             );
         }
 
@@ -448,7 +448,7 @@ final class Factories
                 self::$options[$component],
                 self::$aliases[$component],
                 self::$instances[$component],
-                self::$updated[$component]
+                self::$updated[$component],
             );
 
             return;

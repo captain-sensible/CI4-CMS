@@ -16,10 +16,10 @@ namespace CodeIgniter\Database;
 use CodeIgniter\CLI\CLI;
 use CodeIgniter\Events\Events;
 use CodeIgniter\Exceptions\ConfigException;
+use CodeIgniter\Exceptions\RuntimeException;
 use CodeIgniter\I18n\Time;
 use Config\Database;
 use Config\Migrations as MigrationsConfig;
-use RuntimeException;
 use stdClass;
 
 /**
@@ -605,7 +605,7 @@ class MigrationRunner
                 CLI::color(lang('Migrations.added'), 'yellow'),
                 $migration->namespace,
                 $migration->version,
-                $migration->class
+                $migration->class,
             );
         }
     }
@@ -625,7 +625,7 @@ class MigrationRunner
                 CLI::color(lang('Migrations.removed'), 'yellow'),
                 $history->namespace,
                 $history->version,
-                $history->class
+                $history->class,
             );
         }
     }
