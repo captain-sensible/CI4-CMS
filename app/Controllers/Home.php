@@ -2,6 +2,10 @@
 
 namespace App\Controllers;
 
+
+use App\Controllers\BaseController;
+use CodeIgniter\Database\ConnectionInterface;
+
 class Home extends BaseController
 {
 			

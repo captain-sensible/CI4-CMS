@@ -66,6 +66,10 @@ $routes->post('delGallery','Gallery::delGalleryDo');
 
 
 /* -------------------------------------------------  */
+
+$routes->get('/test','Home::test');
+
+
 $routes->get('/home','Home::landingpage');
 $routes->get('/getdata', 'Datacontroller::data');
 $routes->get('/', 'Home::landingpage');
