@@ -1,7 +1,11 @@
 
 # CodeIgniter C.M.S
 
-A very light blog engine CMS alternative to W.P using Codeigniter 4.6.0  Bootstrap 5.3 and Sqlite3 database. There is a grunt file to work from web root scss. Breakpoints so is mobile responsive
+A very light blog engine CMS alternative to W.P using Codeigniter 4.6.0  Bootstrap 5.3 and Sqlite3 database. There is a grunt file to work from web root scss. Breakpoints so is mobile responsive. Ive uploaded my vendor in this release because there was an issue with timetrait.php  in 118 of vendor i fixed. 
+
+ive added some content security policy via a meta tag in the main weblayout  view 
+
+So there is no need to run composer update.Ive left out node_modules  so you will need to run npm (see below) 
 
 
 <img src ="https://andrinaboutique.com/images/mobile-responsive.png" height="500px">
@@ -232,10 +236,8 @@ The  Gruntfile.js is at web root :
 
 commands to use are:
 
-'grunt sass'
-
-
-'grunt watch'
+	'grunt sass'
+	'grunt watch'
 
 
 The command grunt sass does a one time conversion of scss code  of custom.scss to custom.css and places the custom.css in the right place (public/css).
@@ -246,10 +248,9 @@ grunt watch will keep looking for changes in the scss code , convert and update 
 But you will need to install stuff system wide ; you will need to have nodejs, grunt-cli in my case on Arch ruby  
 installed system wide and  then project wise  from a command line , with context location web root  :
 
-<code>
-$npm init
-$npm install
-</code>
+
+	$npm init
+	$npm install
 for grunt see 
  See https://gruntjs.com/
 

@@ -1,17 +1,6 @@
 $andy:#OOOOOO;
-
-
-
-
-
-
-
-
-
-
 $gold:#F5BF03;
 $gold2:rgba(245,191,3,0.5);
-
 $andycolor:rgba(255, 102, 255, 0.1);
 $andycolor2:rgba(227, 11, 74, 0.1);
 $andycolor3:rgba(153, 102, 51, 0.1);
@@ -19,7 +8,6 @@ $red:#e2426d;
 $crimson:#FF5433;
 $burgundy:#E30B4A ;
 $lightblue:#1bbbeb ;
-$lightblue2:#a9dfef;
 $beige:#E8C3B4;
 $violet:#9842e2;
 $beige2:#E8E4B4 ;
@@ -48,10 +36,15 @@ $prophetBlue:#0000ff;
 }
 
 
+
+
 br.clearfix
 {
 @include clearfix;
 }
+
+
+
 
 @mixin margin
 
@@ -59,6 +52,14 @@ br.clearfix
 margin-left:1rem;
 margin-right:1rem;
 }
+
+p#toggle
+{
+@inclue margin;
+font-family:'literata_bookregular';
+font-size:1.1rem;
+}
+
 
 h3.links
 {
@@ -81,7 +82,7 @@ text-decoration:none;
 blockquote.prophet
 {
 margin-left:1rem;
-//indent-text:5px;
+margin-right:1rem;
 }
 
 
@@ -228,17 +229,7 @@ h1.magnolia {
 
 
 
-h1.anticSlab
 
-{
-font-family: 'antic_slabregular';
-font-weight: regular; 
-font-size:6.0rem;
-
-text-shadow: -1px 0 black, 0 1px black, 2.5px 0 black  , 0 -1px black;
-color:$mustard;
-
-}
 
 
 
@@ -252,10 +243,10 @@ h1.quintessential
  font-weight: regular; 
 font-size:5rem;
 
-text-shadow: -1px 0 black, 0 1px black, 2.5px 0 black  , 0 -1px black;
-//color:$gold;
+text-shadow: -1px 0 $blue, 0 1px $blue, 2.5px 0 $gold , 0 -1px $blue;
+color:$prophetBlue;
 //above prophet 
-color:$lightblue2;
+//color:$gold;
 //above golib and andrina 
 
 
@@ -335,28 +326,7 @@ text-align:center;
 //above is footer text dont touch 
 }
 
-
-h4.info
-
-{
-font-family: 'literata_bookmedium';
-font-size: 2.3rem;
-color:red;
-text-align:center;
-}
-
-
-h4.info2
-
-{
-font-family: 'literata_bookmedium';
-font-size: 2.3rem;
-color:green;
-text-align:center;
-}
-
-
-h4.literataMedium
+ h4.literataMedium
   {
 font-family: 'literata_bookmedium';
 font-size: 1.1rem;
@@ -398,7 +368,7 @@ color:$orange;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-h4.newtimesroman
+h4.times-new-roman
 {
 font-family:'times-new-roman';
 font-size:2.3rem;
@@ -410,7 +380,7 @@ color:$beige2;
 h4.antic
 {
  font-family: 'antic_sansregular';
-
+ font-family: 'quintessentialregular';
  font-weight: regular; 
 font-size:2.1rem;
 color:$brown;
@@ -439,14 +409,16 @@ h4.amadeus {
   }
 
 
-h4.times-new-roman
+h4.newtimesroman
 {
+
+
 font-family: 'times_new_romanregular';
 
-font-weight:regular;
-font-size:2.3rem;
-color:$green;
-text-shadow: -1px 0 black, 0 1px $brown, 1px 0 black, 0 -1px black;
+font-weight: lighter; 
+font-size:2.5rem;
+color:$sea;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 h4.kingsthingsLite
@@ -615,6 +587,18 @@ color:$mustard;
  text-shadow: -1px 0 black, 0 1px $burgundy, 1px 0 black, 0 -1px black;
 }
 
+h4.balgruf
+
+{
+font-family:'balgruf';
+font-weight: regular; 
+font-size:2.3rem;
+margin-left:0.5rem;
+color:$green;
+ text-shadow: -1px 0 black, 0 1px $burgundy, 1px 0 black, 0 -1px black;
+}
+
+
 
 div.headsection {
 display:flex;
@@ -648,10 +632,49 @@ align-content:space-between;
 justify-content:center;
 background-image: url(../images/footer-image.png); 
 //reason have colour below is that above is apart from crosses transparent 
-background-color:$lightblue2;
+background-color:$lightblue;
  background-repeat: no-repeat;
 background-size: cover; 
 }
+
+
+
+ 
+
+iframe.x
+
+{
+width:90%;
+height:600px;
+}
+
+div.home
+
+{
+display:flex;
+flex-direction:column;
+opacity: 1;
+@include margin;
+flex-grow:2;
+}
+
+div.x
+
+{
+display:flex;
+flex-direction:column;
+@include margin;
+flex-grow:1;
+border:thin;
+border:solid;
+border-color:$brown;
+border-top-right-radius:15px;
+border-top-left-radius:15px;
+border-bottom-right-radius:15px;
+border-bottom-left-radius:15px;
+
+}
+
 
 
 div.adminpanel
@@ -660,8 +683,8 @@ div.adminpanel
 display:flex;
 flex-direction:column;
 @include margin;
-background-color:$beige2;
-flex-basis:200px;
+background-color:$beige;
+
 flex-grow:1;
 border-top-right-radius:15px;
 border-top-left-radius:15px;
@@ -678,7 +701,7 @@ opacity: 1;
 @include margin;
 
 
-background-color:$beige2;
+background-color:$beige;
 flex-basis:400px;
 flex-grow:3;
 border-top-right-radius:15px;
@@ -931,6 +954,13 @@ div.headsection div.logo img {
 
 {
 
+
+
+
+
+
+
+
 div.delBlogImg2 
 {
 display:flex;
@@ -973,12 +1003,12 @@ margin-bottom:10px;
 			
 			
 			
-				h1.caroni, h1.lemonchicken ,h1.amadeus,h1.quintessential,h1.anticSlab
+				h1.caroni, h1.lemonchicken ,h1.amadeus,h1.quintessential
 				 {
 				  font-size: 2.0rem;
 				}
 
-h4.aaargh, h4.newtimesroman,h4.antic,h4.anticSlab,  h4.quintessentialViolet,  h4.amadeus, h4.kingsthingsLite,   h4.times-new-roman,      h4.optimanormal,  h4.magnolia, h4.caroni  ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  ,  h4.quintessentialBlue
+h4.aaargh, h4.newtimesroman,h4.antic,h4.anticSlab,  h4.quintessentialViolet,  h4.amadeus, h4.kingsthingsLite,   h4.newtimes,      h4.optimanormal,  h4.magnolia, h4.caroni  ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  ,  h4.quintessentialBlue
                
                {
                font-size: 1.5rem;
@@ -1016,7 +1046,26 @@ background-size: cover;
    display:flex;
    width:100%;
    }    
-           
+ 
+ div.home
+ {
+ display:flex;
+ flex-grow:1;
+ }
+   
+  div.x
+  {
+  display:flex;
+  flex-grow:1;
+  } 
+   
+   
+   iframe.x
+
+{
+width:90%;
+height:270px;
+}        
                
 }
 
@@ -1024,6 +1073,15 @@ background-size: cover;
 
 
 {
+iframe.x
+
+{
+width:90%;
+height:270px;
+}
+
+
+
 
 					div.a, div.b,div.c
 			{
@@ -1033,13 +1091,13 @@ background-size: cover;
 			
 				
 				
-				h1.caroni, h1.lemonchicken ,h1.amadeus,h1.quintessential,h1.anticSlab
+				h1.caroni, h1.lemonchicken ,h1.amadeus,h1.quintessential
 				 {
 				  font-size: 2.5rem;
 				  
 				}
 
-h4.aaargh,   h4.newtimesroman,h4.antic,h4.anticSlab,  h4.quintessentialViolet,  h4.quintessentialBlue,  h4.amadeus,h4.kingsthingsLite,        h4.times-new-roman,    h4.optimanormal, h4.magnolia,h4.caroni  ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  
+h4.aaargh,   h4.newtimesroman,h4.antic,h4.anticSlab,  h4.quintessentialViolet,  h4.quintessentialBlue,  h4.amadeus,h4.kingsthingsLite,        h4.newtimes,    h4.optimanormal, h4.magnolia,h4.caroni  ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  
                
                {
                font-size: 1.7rem;
@@ -1088,6 +1146,9 @@ background-size: cover;
 
 {
             
+            
+            
+            
             div.a, div.b,div.c
 			{
 			
@@ -1097,12 +1158,12 @@ background-size: cover;
             
             
             
-               h1.caroni, h1.lemonchicken ,h1.amadeus,h1.quintessential, h1.anticSlab
+               h1.caroni, h1.lemonchicken ,h1.amadeus,h1.quintessential
 				 {
 				  font-size: 3.0rem;
 				}
 
-h4.aaargh, h4.newtimesroman,   h4.antic,h4.anticSlab, h4.quintessentialViolet, h4.quintessentialBlue, h4.amadeus, h4.kingsthingsLite,     h4.times-new-roman,          h4.optimanormal,   h4.magnolia,h4.caroni ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  
+h4.aaargh, h4.newtimesroman,   h4.antic,h4.anticSlab, h4.quintessentialViolet, h4.quintessentialBlue, h4.amadeus, h4.kingsthingsLite,     h4.newtimes,          h4.optimanormal,   h4.magnolia,h4.caroni ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  
                
                {
                font-size: 2.2rem;
@@ -1143,13 +1204,20 @@ background-size: cover;
    width:100%;
    }    
    
-   
+   iframe.x
+
+{
+width:90%;
+height:270px;
+}
    
 }
 
 @media (min-width:769px) and (max-width:992px) and  (orientation: portrait) 
 
 {
+
+
 
   div.a, div.b,div.c
 			{
@@ -1159,13 +1227,13 @@ background-size: cover;
 			
 
 
-h1.caroni, h1.lemonchicken  ,h1.amadeus,h1.quintessential,h1.anticSlab
+h1.caroni, h1.lemonchicken  ,h1.amadeus,h1.quintessential
 				 {
-				  font-size: 3.5rem;
+				  font-size: 3.0rem;
 				}
 
  
- h4.aaargh,h4.newtimesroman,h4.antic,h4.anticSlab, h4.quintessentialViolet, h4.quintessentialBlue, h4.amadeus, h4.kingsthingsLite  ,h4.times-new-roman,     h4.optimanormal,  h4.magnolia,h4.caroni ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  
+ h4.aaargh,h4.newtimesroman,h4.antic,h4.anticSlab, h4.quintessentialViolet, h4.quintessentialBlue, h4.amadeus, h4.kingsthingsLite    h4.newtimes,     h4.optimanormal,  h4.magnolia,h4.caroni ,h4.quintessential, h4.kaushanscript, h4.dancing-script-ot ,h4.shangrilanReg  ,h4.lemonchicken  
                
                {
                font-size: 2.2rem;
@@ -1188,6 +1256,16 @@ background-size: cover;
    display:flex;
    flex-direction:column;
    }            
+     
+     iframe.x
+
+{
+width:98%;
+height:300px;
+
+
+
+}
                
    div.e
    {
@@ -1216,14 +1294,38 @@ height:150px;
 		}	
 
 
-h1.caroni, h1.lemonchicken ,h1.amadeus,h1.quintessential,h1.anticSlab
+h1.caroni, h1.lemonchicken ,h1.amadeus,h1.quintessential
 				 {
 				  font-size: 4.0rem;
 				}
 
 
+div.tiktok
+{
+display:flex;
+flex-direction:row;
+}
 
 
+div.x
+{
+display:flex;
+flex-grow:1;
+}
+
+div.home
+{
+display:flex;
+flex-grow:2;
+}
+
+iframe.x
+
+{
+width:90%;
+height:600px;
+
+}
 
 
 }
@@ -1239,28 +1341,83 @@ h1.caroni, h1.lemonchicken ,h1.amadeus,h1.quintessential
 
 @media (min-width: 700px) and (max-width: 1024px) and (orientation: landscape) {
 
-h1.caroni, h1.lemonchicken, h1.amadeus
+h1.caroni, h1.lemonchicken, h1.amadeus, h1.quintessential
 				 {
 				  font-size: 3.7rem;
 				}
+div.tiktok
+{
+display:flex;
+flex-direction:row;
+}
+
+
+div.x
+{
+display:flex;
+flex-direction:row;
+flex-grow:1;
+}
+div.home
+{
+display:flex;
+flex-grow:1;
 
 }
 
 
+iframe.x
+
+{
+width:90%;
+height:400px;
+
+}
+
+
+
+
+
+}
+
+
+
+
+
+
 @media (min-width: 1025px) and  (orientation: landscape) {
 
-h1.caroni,  h1.lemonchicken ,h1.amadeus,h1.quintessential,h1.anticSlab
+h1.caroni,  h1.lemonchicken ,h1.amadeus,h1.quintessential
 				 {
 				  font-size: 3.7rem;
 				}
 
 
+div.tiktok
+{
+display:flex;
+flex-direction:row;
+}
 
 
+div.x
+{
+display:flex;
+flex-grow:1;
+}
 
+div.home
+{
+display:flex;
+flex-grow:1;
+}
 
+iframe.x
 
+{
+width:90%;
+height:600px;
 
-
+}
 
 }

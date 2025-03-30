@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php echo $title ?>  </title>
 <meta name="generator" content="Geany 1.38" />
+<meta http-equiv="Content-Security-Policy" content=" default-src 'none';   form-action 'self'; frame-src 'self'  www.tiktok.com www.youtube.com;    style-src 'self' maxcdn.bootstrapcdn.com  cdn.jsdelivr.net       ; font-src 'self'   maxcdn.bootstrapcdn.com ;  img-src 'self'; script-src 'self'  https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js   https://www.xml-sitemaps.com/   www.tiktok.com    "         />
 <link rel="stylesheet" type="text/css" href ="<?php echo base_url("css/myStyle.css"); ?>">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
@@ -48,7 +49,7 @@
 				 
 	           <div class="b"> <a href = "https://www.youtube.com/@somebody"  target="_blank"    > <i class="fa fa-youtube   fa-3x"></i>	</a></div>
               
-	               <div class= "c"><div><h6>powered by:</h6></div> <a href ="https://sourceforge.net/projects/laravelblogengine/"><h7>Laravel blog Engine</h7></a>    </div>
+	               <div class= "c"><div><h6>powered by:</h6></div> <a href ="https://sourceforge.net/projects/codeigniter4cms/"><h7>CI4  blog Engine</h7></a>    </div>
 	
 	        </div>	
 	       <h5 class="newtimes">© <?php echo $date;?> Some Web  Footer    | All Rights Reserved </h5>	
@@ -61,6 +62,9 @@
 <script src="<?php echo base_url('js/bootstrap.bundle.js');?>"></script>
 <script src="<?php echo base_url('js/jquery-3.5.1.min.js');?>"></script>
 <script src="<?php echo base_url('js/jquery-migrate-3.3.0.js');?>"></script>
+ 
+ 
+ 
  
 <script>
 	$( window ).load(function() {
