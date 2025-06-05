@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php echo $title ?>  </title>
 <meta name="generator" content="Geany 1.38" />
-<meta http-equiv="Content-Security-Policy" content=" default-src 'none';   form-action 'self'; frame-src 'self'  www.tiktok.com www.youtube.com;    style-src 'self' maxcdn.bootstrapcdn.com  cdn.jsdelivr.net       ; font-src 'self'   maxcdn.bootstrapcdn.com ;  img-src 'self'; script-src 'self'  https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js   https://www.xml-sitemaps.com/   www.tiktok.com    "         />
+<!--<meta http-equiv="Content-Security-Policy" content=" default-src 'none';   form-action 'self'; frame-src 'self'  www.tiktok.com www.youtube.com;    style-src 'self' maxcdn.bootstrapcdn.com  cdn.jsdelivr.net       ; font-src 'self'   maxcdn.bootstrapcdn.com ;  img-src 'self'; script-src 'self'  https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js   https://www.xml-sitemaps.com/   www.tiktok.com    "         />-->
 <link rel="stylesheet" type="text/css" href ="<?php echo base_url("css/myStyle.css"); ?>">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
@@ -63,9 +63,13 @@
 <script src="<?php echo base_url('js/jquery-3.5.1.min.js');?>"></script>
 <script src="<?php echo base_url('js/jquery-migrate-3.3.0.js');?>"></script>
  
- 
- 
- 
+ <script>
+ $(window).function(event) { 
+  //  location.reload(); 
+
+  alert ("Hello world!");
+}
+ </script>
 <script>
 	$( window ).load(function() {
 $("button#2").hide();	
@@ -79,6 +83,12 @@ $("p#toggle").show();
 });  
 		  
 	</script>
-
+  <script>
+        $(document).ready(function() {
+            if (window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.href);
+            }
+        });
+    </script>
 </body>
 </html>

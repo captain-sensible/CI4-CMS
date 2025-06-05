@@ -32,7 +32,7 @@ use ReturnTypeWillChange;
 trait TimeTrait
 {
     /**
-     * @var DateTimeZone
+     * @var DateTimeZone|string
      */
     protected $timezone;
 
@@ -263,7 +263,7 @@ trait TimeTrait
      *
      * @throws Exception
      */
-    public static function createFromTimestamp(int | float $timestamp, $timezone = null, ?string $locale = null): static
+    public static function createFromTimestamp(float|int $timestamp, $timezone = null, ?string $locale = null): static
     {
         $time = new static(sprintf('@%.6f', $timestamp), 'UTC', $locale);
 

@@ -222,6 +222,8 @@ $result2= $handle->getOne('admin');
                
                 unset($_SESSION['role']);
                 unset($_SESSION['count']);
+                
+                
               
 	      $data= [ 
 	      'title'=> 'logout',
@@ -238,7 +240,6 @@ $result2= $handle->getOne('admin');
         
 	
             
-	    
 	    
 	    
 	    

@@ -31,7 +31,7 @@ class Home extends BaseController
 			{
 			   $jelly ="strwaberry";
 			   echo $jelly;
-				return view('welcome_message');
+				
 				 
 			}
 
