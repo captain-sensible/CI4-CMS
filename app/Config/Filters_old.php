@@ -34,6 +34,7 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+         'myfilter'=> \App\Filters\MyFilter::class
     ];
 
     /**
@@ -65,10 +66,7 @@ class Filters extends BaseFilters
      * List of filter aliases that are always
      * applied before and after every request.
      *
-     * @var array{
-     *     before: array<string, array{except: list<string>|string}>|list<string>,
-     *     after: array<string, array{except: list<string>|string}>|list<string>
-     * }
+     * @var array<string, array<string, array<string, string>>>|array<string, list<string>>
      */
     public array $globals = [
         'before' => [
@@ -106,5 +104,6 @@ class Filters extends BaseFilters
      *
      * @var array<string, array<string, list<string>>>
      */
-    public array $filters = [];
+   // public array $filters = [];
+    public array $filters = [	'myfilter' => ['before' => ['removeProduct','editOneProduct','editProducts','addProduct','newblog','editBlogs','removeBlog','addGallery','delGallery','resetPW','admin' ]]];
 }

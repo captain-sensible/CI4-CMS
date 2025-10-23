@@ -1,8 +1,5 @@
 <?php
 
-use CodeIgniter\Boot;
-use Config\Paths;
-
 /*
  *---------------------------------------------------------------
  * CHECK PHP VERSION
@@ -51,9 +48,9 @@ if (getcwd() . DIRECTORY_SEPARATOR !== FCPATH) {
 require FCPATH . '../app/Config/Paths.php';
 // ^^^ Change this line if you move your application folder
 
-$paths = new Paths();
+$paths = new Config\Paths();
 
 // LOAD THE FRAMEWORK BOOTSTRAP FILE
 require $paths->systemDirectory . '/Boot.php';
 
-exit(Boot::bootWeb($paths));
+exit(CodeIgniter\Boot::bootWeb($paths));

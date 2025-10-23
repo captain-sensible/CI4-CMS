@@ -9,9 +9,6 @@
  * the LICENSE file that was distributed with this source code.
  */
 
-use CodeIgniter\Boot;
-use Config\Paths;
-
 /*
  *---------------------------------------------------------------
  * Sample file for Preloading
@@ -72,10 +69,10 @@ class preload
 
     private function loadAutoloader(): void
     {
-        $paths = new Paths();
+        $paths = new Config\Paths();
         require rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'Boot.php';
 
-        Boot::preload($paths);
+        CodeIgniter\Boot::preload($paths);
     }
 
     /**

@@ -4,7 +4,6 @@ namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Log\Handlers\FileHandler;
-use CodeIgniter\Log\Handlers\HandlerInterface;
 
 class Logger extends BaseConfig
 {
@@ -37,7 +36,7 @@ class Logger extends BaseConfig
      * For a live site you'll usually enable Critical or higher (3) to be logged otherwise
      * your log files will fill up very fast.
      *
-     * @var int|list<int>
+     * @var array|int
      */
     public $threshold = (ENVIRONMENT === 'production') ? 4 : 9;
 
@@ -73,16 +72,16 @@ class Logger extends BaseConfig
      *
      * Handlers are executed in the order defined in this array, starting with
      * the handler on top and continuing down.
-     *
-     * @var array<class-string<HandlerInterface>, array<string, int|list<string>|string>>
      */
     public array $handlers = [
+
         /*
          * --------------------------------------------------------------------
          * File Handler
          * --------------------------------------------------------------------
          */
         FileHandler::class => [
+
             // The log levels that this handler will handle.
             'handles' => [
                 'critical',
@@ -100,7 +99,7 @@ class Logger extends BaseConfig
              * An extension of 'php' allows for protecting the log files via basic
              * scripting, when they are to be stored under a publicly accessible directory.
              *
-             * NOTE: Leaving it blank will default to 'log'.
+             * Note: Leaving it blank will default to 'log'.
              */
             'fileExtension' => '',
 

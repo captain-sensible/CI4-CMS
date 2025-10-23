@@ -124,3 +124,11 @@ _modules/*
 
 /results/
 /phpunit*.xml
+
+
+vendor/
+
+node_modules/
+
+
+
