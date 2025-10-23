@@ -1,6 +1,8 @@
 
 # CodeIgniter C.M.S
 
+test
+
 A very light blog engine CMS alternative to W.P using Codeigniter 4.6.0  Bootstrap 5.3 and Sqlite3 database. There is a grunt file to work from web root scss. Breakpoints so is mobile responsive. Ive uploaded my vendor in this release because there was an issue with timetrait.php  in 118 of vendor i fixed. 
 
 ive added some content security policy via a meta tag in the main weblayout  view 
