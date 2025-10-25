@@ -32,11 +32,26 @@
     
    
                              <div class="form-group"> 
-			    <label for="captcha">Numbers Below Submit Button </label>
+			    <label for="captcha">Type Numbers into text box, that are seen below textbox </label>
 			    <input type="input" name="captcha" id ="theCaptcha" class="form-control"  required = "required"     /><br />
 			     </div>
 			 
-            
+             <div class="mx-auto" >
+							
+					        
+			
+			
+			
+			<img  class="img-fluid"   src ="<?php echo base_url()."/captcha/".$captcha[0].".png";?>">
+			<img class = "img-fluid"   src ="<?php echo base_url()."/captcha/".$captcha[1].".png";?>">
+					
+			<img class = "img-fluid "   src ="<?php echo base_url()."/captcha/".$captcha[2].".png";?>">
+			<img class = "img-fluid "   src ="<?php echo base_url()."/captcha/".$captcha[3].".png";?>">
+			
+			<img class = "img-fluid "   src ="<?php echo base_url()."/captcha/".$captcha[4].".png";?>">
+			
+			
+			</div>
 
   
 			    <input type="submit" name="submit" class="btn btn-info"value="submit" />
@@ -56,22 +71,7 @@
 			
 			 
 				
-			 <div class="mx-auto" >
-							
-					        
 			
-			
-			
-			<img  class="img-fluid"   src ="<?php echo base_url()."/captcha/".$captcha[0].".png";?>">
-			<img class = "img-fluid"   src ="<?php echo base_url()."/captcha/".$captcha[1].".png";?>">
-					
-			<img class = "img-fluid "   src ="<?php echo base_url()."/captcha/".$captcha[2].".png";?>">
-			<img class = "img-fluid "   src ="<?php echo base_url()."/captcha/".$captcha[3].".png";?>">
-			
-			<img class = "img-fluid "   src ="<?php echo base_url()."/captcha/".$captcha[4].".png";?>">
-			
-			
-			</div>
 		
 			
 			

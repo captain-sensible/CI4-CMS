@@ -248,15 +248,19 @@ h1.quintessential
 
 {
 
- font-family: 'quintessentialregular';
+font-family: 'quintessentialregular';
  font-weight: regular; 
 font-size:5rem;
 
 text-shadow: -1px 0 black, 0 1px black, 2.5px 0 black  , 0 -1px black;
-//color:$gold;
+color:$mustard;
 //above prophet 
-color:$lightblue2;
+//color:$lightblue2;
 //above golib and andrina 
+
+
+
+ 
 
 
 
@@ -648,7 +652,7 @@ align-content:space-between;
 justify-content:center;
 background-image: url(../images/footer-image.png); 
 //reason have colour below is that above is apart from crosses transparent 
-background-color:$lightblue2;
+background-color:$mustard;
  background-repeat: no-repeat;
 background-size: cover; 
 }

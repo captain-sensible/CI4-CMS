@@ -31,7 +31,7 @@
         </li>
         
          <li class="nav-item">
-          <a class="nav-link" href=" <?php echo base_url('examplefonts');?>">Fonts</a>   
+          <a class="nav-link" href=" <?php echo base_url('readMe');?>">readMe</a>   
         </li>
      
       
@@ -39,13 +39,7 @@
           <a class="nav-link" href=" <?php echo base_url('blackcat');?>">Login </a>   
         </li>
      
-      <li class="nav-item">
-          <a class="nav-link" href=" <?php echo base_url('logout');?>">log out </a>   
-        </li>
-     
-      <li class="nav-item">
-          <a class="nav-link" href=" <?php echo base_url('admin');?>">Admin</a>   
-        </li>
+      
      
       
       
