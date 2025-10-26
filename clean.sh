@@ -3,5 +3,5 @@
 
 
 
-rm  /path/to/domain.com/writable/session/ci_*
-rm  /path/to/domain.com.com/writable/logs/log-*
+rm  /writable/session/ci_*
+rm /writable/logs/log-*
