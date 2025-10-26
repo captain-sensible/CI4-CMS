@@ -6,7 +6,14 @@
 #readMe   
 
 A very light blog engine CMS alternative to W.P using Codeigniter 4.6.3  Bootstrap 5. and Sqlite3 database. 
-There is a grunt file in the web root to work with  scss  and update everything including in the browser, as you go using grunt watch
+There is a grunt file in the web root to work with  scss  and update everything including in the browser, as you go using the commands:
+
+
+
+
+>grunt sass   
+then  
+>grunt watch
 
 
 Breakpoints are included in the style sheets, so CI4-CMS  is mobile responsive. 
@@ -33,7 +40,7 @@ Because with some incremental updates for the CodeIgniter4  can cause breaking c
 
  "codeigniter4/framework": "4.6.3"  
  
-To update the core CI4,  edit that line in Composer.json to the next release number,then  run the command from a terminal :
+To update the core CI4,  edit that line in Composer.json to the next release number what ever that will be, then  run the command from a terminal :
  
 			composer update 
 			
@@ -55,13 +62,29 @@ then follow instructions on the CI4 guide :
 Now to make things easier i have set up a user (with role of admin powers ) as follows:  
 
 
->User : Demo <br>
->Password : Demo  <br><br>
+>User : Demo  
+>Password : Demo  
 
-For ease to of playing  with system ive put login URL into the navbar, you can remove that on moving to production;  URL for admin login is /blackcat
+For ease  of playing  with the system ive put login URL into the navbar, you can remove that on moving to production;  URL for admin login is:   
+/blackcat
 
 After logging in you should see: 
-<img src ="https://andrinaboutique.com/images/admin-page.jpg" width ="550px">
+
+
+![admin ](https://andrinaboutique.com/images/admin-page.png)
+
+Once logged in if somehow you come of the admin page, then to get back the url is:  
+/admin
+
+If your not logged in going to that URL will give a page not found.
+
+IN the navigation menu there is a link to reset admin user name and password
+
+Thats a quick introduction, once CI4-CMS is fired up a bit more detail will be found by clicking on the readMe  link.
+
+The CodeIgniter4 forum can be found at: [CodeIgniter4](https://forum.codeigniter.com/)
+
+
 
 
 
